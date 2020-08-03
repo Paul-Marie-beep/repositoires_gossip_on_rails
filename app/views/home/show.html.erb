@@ -1,0 +1,23 @@
+
+<! #@all_potins c'est Potins.all, on l'a défini dans le controller de la page d'accueil>
+
+
+
+<% @all_potins.each do |gossip| %>
+
+
+
+
+<div class="card">
+  <div class="card-header">
+    Potin
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"><%= gossip.title %> </h5>
+    <p class="card-text"> <%= gossip.user.first_name%> </p>
+    <a href="author/<% gossip.id %>" class="btn btn-primary">Voir le potin</a>
+  </div>
+</div>
+
+
+<%end%>
